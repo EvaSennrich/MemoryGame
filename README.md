@@ -6,7 +6,7 @@ Submitted by: **Eva Sennrich**
 
 Time spent: **15** hours spent in total
 
-Link to project: (https://glitch.com/~veiled-wax-route)
+Link to project: (https://veiled-wax-route.glitch.me/)
 
 ## Required Functionality
 
