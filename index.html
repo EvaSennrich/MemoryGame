@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Light and Sound Memory Game</title>
+    <link rel="browser Icon" href="https://cdn.glitch.global/1aa229e0-3228-4012-b5ee-861f10af57ff/favicon2.ico?v=1648087863116" />
+    <meta name="description" content="A simple website, built with Glitch. Remix it to get your own." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Josefin+Sans:ital,wght@0,300;0,400;1,200;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content" role="main">
+        <h1 class="title">Light and Sound Memory Game</h1>
+        <div class="instructions">
+          <h2>Repeat the pattern back to win the game!</h2>
+        </div>
+      </div>
+    </div>
+    <div class="playerInfoContainer">
+      <div class="score">
+        <div class="scoreTitle">Score</div>
+        <div class="scoreNumber">0</div>
+      </div>
+      <div class="timer">
+        <div class="timerTitle">Time Left</div>
+        <div class="timeLeftNumber">0:00</div>
+      </div>
+      <div class="Attempts">
+        <div class="attemptsTitle">Attempts Left</div>
+        <div class="attemptsNumber">
+          <i class="fa-solid fa-heart"></i>
+          <i class="fa-solid fa-heart"></i>
+          <i class="fa-solid fa-heart"></i>
+        </div>
+      </div>
+    </div>
+
+    <div id="gameButtonArea">
+      <button id="button1" onclick="guess(1)" onmousedown="startTone(1)"></button>
+      <button id="button2" onclick="guess(2)" onmousedown="startTone(2)"></button>
+      <button id="button3" onclick="guess(3)" onmousedown="startTone(3)"></button>
+      <button id="button4" onclick="guess(4)" onmousedown="startTone(4)"></button>
+      <button id="button5" onclick="guess(5)" onmousedown="startTone(5)"></button>
+      <!-- <button id="button6" onclick="guess(6)" onmousedown="startTone(6)"></button>
+      <button id="button7" onclick="guess(7)" onmousedown="startTone(7)"></button>
+      <button id="button8" onclick="guess(8)" onmousedown="startTone(8)"></button> -->
+    </div>
+
+    <div class="startStopBtnsContainer">
+      <button id="startBtn">Start</button>
+      <button id="stopBtn" class="hidden">Stop</button>
+    </div>
+    
+    <div id= "playerSettings">
+    <div class="moreButtons">
+      <h3>Buttons</h3>
+      <button class="removeButtons">-</button>
+      <button class="addButtons">+</button>
+    </div>
+    <div id="speed-select">
+       <h3>Speed</h3>
+      <select name="speed" id="speed">
+        <option value="normal">Normal</option>
+        <option value="fast">Fast</option>
+        <option value="faster">Faster</option>
+      </select>
+    </div>
+  </div>
+    
+    <footer class="footer">
+      <div class="links">
+        <a class="github-btn" target="_blank" href="https://github.com/evasennrich">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a class="linkedin-btn" target="_blank" href="https://www.linkedin.com/in/eva-sennrich-04075b221/">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+      </div>
+    </footer>
+    <script src="/script.js" defer></script>
+    <script src="https://kit.fontawesome.com/4ca3871bac.js" crossorigin="anonymous"></script>
+  </body>
+</html>
+

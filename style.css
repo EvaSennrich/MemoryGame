@@ -1,0 +1,488 @@
+/* Our default values set as CSS variables */
+:root {
+  --color-bg: #69f7be;
+  --color-text-main: #000000;
+  --color-primary: #ffff00;
+  --wrapper-height: 30.5vh;
+  --image-max-width: 300px;
+  --image-margin: 3rem;
+  --font-family: "Josefin Sans", sans-serif;
+  --font-family-header: "Lobster", cursive;
+}
+
+/* Basic page style resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+[hidden] {
+  display: none !important;
+}
+
+/* Github and linkedin button */
+.github-btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+.github-btn i {
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  color: #39003c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.linkedin-btn {
+  cursor: pointer;
+  text-decoration: none;
+}
+.linkedin-btn i {
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  color: #39003c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Body */
+body {
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #39003c;
+}
+
+/* Page structure */
+.wrapper {
+  min-height: var(--wrapper-height);
+  display: grid;
+  place-items: center;
+  padding-top: 2.5rem;
+  margin: 0;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Title-h1*/
+.title {
+  /* display: flex;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap; */
+  text-align: center;
+  width: 100%;
+  color: white;
+  font-family: "Dancing Script", cursive;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 5rem;
+  line-height: 100%;
+  margin: 0;
+  animation-name: animatedTitle;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-delay: s;
+  animation-direction: alternate;
+}
+
+@keyframes animatedTitle {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #ffd000;
+  }
+}
+
+/* Instructions-h2*/
+.instructions {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+/* Player Info Container */
+.playerInfoContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90vw;
+  margin: 0rem auto 0.5rem;
+  padding: 0 1rem 0.5rem 0rem;
+  color: white;
+  border-bottom: 4px solid #f8c2a2;
+}
+
+.scoreNumber,
+.attemptsNumber {
+  display: flex;
+  justify-content: center;
+  margin: 0.5rem;
+  font-size: 1.4rem;
+}
+
+.timerTitle {
+  display: flex;
+  justify-content: center;
+}
+
+.timeLeftNumber {
+  font-size: 2rem;
+  margin-top: 0.5rem;
+}
+
+.fa-heart {
+  color: #f8c2a2;
+}
+
+.attemptsNumber {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.scoreTitle,
+.attemptsTitle,
+.timerTitle {
+  margin-top: 0.6rem;
+}
+
+/* Game Buttons */
+#gameButtonArea {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 35vh;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 15px 10px 0 10px;
+}
+#gameButtonArea > button {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  margin: 0.5rem;
+  border-radius: 12px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+#button1 {
+  background-image: linear-gradient(to bottom right, #7144f0, #ffbd80);
+  transition: all 1s;
+}
+
+#button2 {
+  background-image: linear-gradient(to bottom right, #fd874f, #f3417b);
+  transition: all 1s;
+}
+
+#button3 {
+  background-image: linear-gradient(to bottom right, #39003c, #e90052);
+  transition: all 1s;
+}
+
+#button4 {
+  background-image: linear-gradient(to bottom right, #fcff75, #b10a41);
+  transition: all 1s;
+}
+
+#button5 {
+  background-image: linear-gradient(to bottom right, rgb(7, 50, 168), #47e6ff);
+  transition: all 1s;
+}
+
+#button6 {
+  background-image: linear-gradient(to bottom right, #3f5efb, #fc466b);
+  transition: all 1s;
+}
+
+#button7 {
+  background-image: linear-gradient(to bottom right, #22c1c3, #fdbb2d);
+  transition: all 1s;
+}
+
+#button8 {
+  background-image: linear-gradient(to bottom right, #020024, #1515b8, #94bbe9);
+  transition: all 1s;
+}
+
+#button1:active,
+#button1.lit {
+  transform: scale(0.85);
+  background-image: url("https://cdn.glitch.global/1aa229e0-3228-4012-b5ee-861f10af57ff/milk%26cookie.jpeg?v=1648087872444");
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  background-color: #fcff75;
+}
+
+#button2:active,
+#button2.lit {
+  transform: scale(0.85);
+  background-image: url("https://cdn.glitch.global/1aa229e0-3228-4012-b5ee-861f10af57ff/onigiri.webp?v=1648087881625");
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  background-color: #6c41e4;
+}
+
+#button3:active,
+#button3.lit {
+  transform: scale(0.85);
+  background-image: url("https://cdn.glitch.global/1aa229e0-3228-4012-b5ee-861f10af57ff/taco.jpeg?v=1648087894763");
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  background-color: #faeb20;
+}
+
+#button4:active,
+#button4.lit {
+  transform: scale(0.85);
+  background-image: url("https://cdn.glitch.global/1aa229e0-3228-4012-b5ee-861f10af57ff/tea.webp?v=1648087898967");
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  background-color: #b4afff;
+}
+
+#button5:active,
+#button5.lit {
+  transform: scale(0.85);
+  background-image: url("https://cdn.glitch.global/1aa229e0-3228-4012-b5ee-861f10af57ff/panda.jpeg?v=1648087890820");
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  background-color: #6c41e4;
+}
+
+#button6:active,
+#button6.lit {
+  transform: scale(0.85);
+  background-image: url("https://cdn.glitch.global/1aa229e0-3228-4012-b5ee-861f10af57ff/cookie.jpeg?v=1648087852192");
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  background-color: #6c41e4;
+}
+
+#button7:active,
+#button7.lit {
+  transform: scale(0.85);
+  background-image: url("https://cdn.glitch.global/1aa229e0-3228-4012-b5ee-861f10af57ff/milk.jpeg?v=1648087867642");
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  background-color: #6c41e4;
+}
+
+#button8:active,
+#button8.lit {
+  transform: scale(0.85);
+  background-image: url("https://cdn.glitch.global/1aa229e0-3228-4012-b5ee-861f10af57ff/muffin.jpeg?v=1648087876263");
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  background-color: #6c41e4;
+}
+/* Start-Stop Buttons */
+#startBtn,
+#stopBtn {
+  font-family: "Josefin Sans", sans-serif;
+  color: white;
+  font-size: 100%;
+  background-color: #aa3cff;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  transition: 500ms;
+  cursor: pointer;
+}
+
+#startBtn:hover {
+  background-image: linear-gradient(#f3417b, #fd874f);
+}
+#stopBtn:hover {
+  background-image: linear-gradient(#f3417b, #fd874f);
+}
+
+.startStopBtnsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 380px;
+  /* margin-top: 1.5vh; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Remove and Add Buttons */
+.moreButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.moreButtons > button {
+  width: 30px;
+  height: 30px;
+  margin: 0.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  color: white;
+  background-color: #aa3cff;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 14px;
+  transition: 500ms;
+  cursor: pointer;
+}
+
+.moreButtons > button:hover {
+  background-image: linear-gradient(#f3417b, #fd874f);
+}
+
+
+#speed-select {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#playerSettings {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+select {
+  width: 70px;
+  height: 30px;
+  margin: 0.5rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: bold;
+  color: white;
+  background-color: #aa3cff;
+  border: 1px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 5px;
+  transition: 500ms;
+  cursor: pointer;
+}
+
+select:hover {
+  background-image: linear-gradient(#f3417b, #fd874f);
+}
+
+/* Subheading */
+h2 {
+  font-family: "Josefin Sans", sans-serif;
+  color: #a4aabe;
+  margin: 1rem auto 0;
+  padding: 1rem 1rem 22px 16px;
+  flex-wrap: wrap;
+  width: 90vw;
+  border-bottom: 4px solid #f8c2a2;
+}
+
+h3 {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: lighter;
+  font-size: 20px;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin: 1rem;
+}
+
+/* Footer and Contact links*/
+.footer {
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto 0;
+  padding: 1rem 0 0 0;
+  flex-wrap: wrap;
+  width: 90vw;
+  height: 11vh;
+  overflow: hidden;
+}
+
+.footer a:hover {
+  background-image: linear-gradient(#f3417b, #fd874f);
+  border-radius: 28%;
+  border: 1px solid white;
+}
+
+.footer .links {
+  padding: 0.5rem 1rem 1.5rem;
+  white-space: nowrap;
+}
+.links {
+  width: 100vw;
+  height: 40vh;
+  border-radius: 50%;
+  background-color: #f8c2a2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* CONFETTIIIII ANIMATION */
+.box {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.confetti {
+  position: absolute;
+  top: -100px;
+}
+/* Start Animation */
+.confetti:nth-child(100n + 2) {
+  animation: animateStart 1.5s ease 1;
+}
+.confetti:nth-child(100n + 4) {
+  animation: animateStart 1.4s ease 1;
+}
+.confetti:nth-child(1000n + 0) {
+  animation: animateStart 1.6s ease 1;
+}
+@keyframes animateStart {
+  0% {
+    top: 100%;
+    left: 50%;
+    box-shadow: 0 0 5px #000;
+  }
+  100% {
+    transform: rotate3d(1, 1, 1, 360deg);
+    top: -100px;
+  }
+}
+
+/* @media screen and (max-width: 700px) {
+  title {
+    text-align: center;
+  }
+} */
